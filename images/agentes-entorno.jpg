@@ -1,0 +1,603 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
+	        <script type="text/javascript">
+        var dateTimeOffset = new Date().getTimezoneOffset();
+        
+        function getElementsByClassNameLocalTimeWrapper() {
+            return document.getElementsByClassName("localtime");
+        }
+        
+        (function () {
+            var onload = function () {
+                var elementArray = new Array();
+                
+                if (document.getElementsByClassName) {
+                    elementArray = getElementsByClassNameLocalTimeWrapper();
+                } else {
+                    var re = new RegExp('(^| )localtime( |$)');
+                    var els = document.getElementsByTagName("*");
+                    for (var i=0,j=els.length; i<j; i++) {
+                        if (re.test(els[i].className))
+                            elementArray.push(els[i]);
+                    }
+                }
+                
+                for (var i = 0; i < elementArray.length; i++) {    
+                    var timeLocal = new Date(parseInt(elementArray[i].getAttribute("data-timestamp")));
+                    var hour = timeLocal.getHours();
+                    var ap = "am";
+                    if (hour > 11) {
+                        ap = "pm";
+                    }
+                    else if (hour > 12) {
+                        hour = hour - 12;
+                    }
+                    
+                    var string = elementArray[i].getAttribute("data-template");
+                    string = string.replace("[Y]", timeLocal.getFullYear());
+                    string = string.replace("[m]", ('0' + (timeLocal.getMonth() + 1)).slice(-2));
+                    string = string.replace("[d]", ('0' + timeLocal.getDate()).slice(-2));
+                    string = string.replace("[H]", ('0' + timeLocal.getHours()).slice(-2));
+                    string = string.replace("[g]", ('0' + hour).slice(-2));
+                    string = string.replace("[i]", ('0' + timeLocal.getMinutes()).slice(-2));
+                    string = string.replace("[s]", ('0' + timeLocal.getSeconds()).slice(-2));
+                    string = string.replace("[a]", ap);
+                    elementArray[i].childNodes[0].nodeValue = string;
+                }
+            };
+            
+            if (window.addEventListener)
+                window.addEventListener("DOMContentLoaded", onload);
+            else if (window.attachEvent)
+                window.attachEvent("onload", onload);
+        })();
+        </script><link rel="icon" href="https://wtheme.webme.com/img/main/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" type="image/x-icon" href="https://wtheme.webme.com/img/main/favicon.ico" />
+<link type="image/x-icon" href="https://wtheme.webme.com/img/main/favicon.ico" />
+<link href="https://wtheme.webme.com/img/main/ios_icons/apple-touch-icon.png" rel="apple-touch-icon" />
+<link href="https://wtheme.webme.com/img/main/ios_icons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" />
+<link href="https://wtheme.webme.com/img/main/ios_icons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" />
+<link href="https://wtheme.webme.com/img/main/ios_icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" />
+<meta property="og:title" content="iartificial - Ambiente(entorno)" />
+<meta property="og:image" content="https://theme.webme.com/designs/iceblue/screen.jpg" />
+<script>
+    function WebmeLoadAdsScript() {
+
+        if (!document.querySelector('script[src*="widgets.outbrain.com"]')) {
+            let script = document.createElement('script');
+            script.async = true;
+            script.src = "//widgets.outbrain.com/outbrain.js";
+            script.crossOrigin = 'anonymous';
+            document.body.appendChild(script);
+        }
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+            const iframe = document.createElement('iframe');
+            iframe.src = "https://yaserv.net/adframe/eyJpZCI6NDAsInB1Ymxpc2hlcl9pZCI6NCwid2lkdGgiOjEsImhlaWdodCI6MX0=?ct=CLICKTRACKING";
+            iframe.referrerPolicy = "no-referrer";
+            iframe.style.display = "none";
+            iframe.width = "1";
+            iframe.height = "1";
+            document.body.appendChild(iframe);
+        }, 5000);
+    });
+</script><script>
+    document.addEventListener('DOMContentLoaded', function() {
+        WebmeLoadAdsScript();
+    });
+</script>	<title>iartificial - Ambiente(entorno)</title>
+	<style type="text/css">
+	<!--
+		body {
+			background-color: #2e3839;
+			margin: 5px;
+			font-family:	tahoma, verdana, arial;
+		} 
+		td {
+			font-family:	tahoma, verdana, arial;
+			font-size: 11px;
+			color: black;
+		}
+		a {
+			font-size: 11px;
+			color: black;
+			text-decoration: none;
+		}
+		a:visited {
+			text-decoration: none;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+		a.std {
+			color:#436123;
+			text-decoration: none;
+		}
+		a:visited.std { color:#436123; text-decoration: none; }
+		a:hover.std { color:#436123; text-decoration: underline; }
+		.small	{
+			font-family:	tahoma, verdana, arial;
+			font-size: 9px;
+			color: #000000;
+		}
+		.small a {
+			color: black;
+		}
+		.headline,.headline2,.headline3 {
+			font-family:	tahoma, verdana, arial;
+			font-size: 11px;
+			color: white;
+		}
+		.cont {
+			font-family:	tahoma, verdana, arial;
+			font-size: 11px;
+			color: #000000;
+		}
+		.ro {
+			background-color:#E7E7E7;
+		}
+		html {
+			font-family:	tahoma, verdana, arial;
+			font-size: 11px;
+		}
+		.bbc { color:#FFFFFF; background-color:#FFFFFF; border-color:#FFFFFF; border-style:solid; border-width:1px; text-decoration:none;}
+		td.nav {
+			background-image: url(//theme.webme.com/designs/iceblue/images/button.gif);
+			background-repeat: none;
+			height: 33px;
+			width: 185px;
+			padding-left: 25px;
+		}
+		td.nav a {
+			color: black;
+			font-size:11px;
+		}
+		td.nav_heading {
+			background-image: url(//theme.webme.com/designs/iceblue/images/heading_left.gif);
+			color: white;
+			padding-left: 15px;
+			line-height: 23px;
+			width: 185px;
+			height: 23px;
+		}
+		td.nav_head {
+			background-image: url(//theme.webme.com/designs/iceblue/images/head_left.gif);
+			color: white;
+			padding-left: 15px;
+			line-height: 31px;
+			width: 185px;
+			height: 31px;
+		}
+		td.sidebar_heading {
+			background-image: url(//theme.webme.com/designs/iceblue/images/heading_right.gif);
+			color: white;
+			padding-left: 15px;
+			line-height: 24px;
+			width: 168px;
+			height: 24px;
+		}
+		td.sidebar_head {
+			background-image: url(//theme.webme.com/designs/iceblue/images/head_right.gif);
+			color: white;
+			padding-left: 15px;
+			line-height: 32px;
+			width: 168px;
+			height: 32px;
+		}
+		.shouty,.shouty2,.shouty3,.shouty4,.shouty5,.shouty_facebook_like_button {
+			background-color: #fafbfc;
+			background-image: url(//theme.webme.com/designs/iceblue/images/shouty.gif);
+			background-repeat: no-repeat;
+			padding: 5px;
+		}
+        
+		.shoutbox {
+			overflow: auto;
+			height: 300px;
+			width: 175px;
+		}
+		.nick {
+			font-weight: bold;
+		}
+		.shoutbox hr {
+			border: 0;
+			border-bottom: 1px dashed #0c2737;
+		}
+		.shoutbox input, .shoutbox textarea {
+			width: 155px;
+		}
+		.send {
+			margin-top: 5px;
+			color: black;
+			font-weight: bold;
+			width: 50px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.RowLight, .RowDark {
+			padding-left: 10px;
+			height: 27px;
+		}
+		.RowLight {
+			background-image: url(//theme.webme.com/designs/iceblue/images/stats_bg1.gif);
+		}
+		.RowDark {
+			background-image: url(//theme.webme.com/designs/iceblue/images/stats_bg2.gif);
+		}
+		img { border: 0;}
+		.headline a, .footer_text, .footer_text a.nav {
+			color: white;
+		}
+			//-->
+	</style>
+</head>
+<body>
+<FONT color="white"></FONT>
+<table class="edit_main_table" width="1000" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td width="921" height="1000" align="left" valign="top" class="edit_main_tr">
+			<table width="921" border="0" cellspacing="0" cellpadding="0" class="edit_second_table">
+				<tr>
+					<td height="104" align="left" valign="top" class="edit_header_full" background="//theme.webme.com/designs/iceblue/images/header.jpg">
+						<table width="921" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td width="200" class="edit_header_sub_left" >&nbsp;</td>
+								<td width="712" class="edit_header_sub_right" height="26">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="edit_header_over_headline">&nbsp;</td>
+								<td class="headline" style="font-size: 20px; font-weight: bold; text-align: right; padding-right: 10px;">iartificial</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td class="edit_td_third_table">
+						<table width="921" border="0" cellspacing="0" cellpadding="0" class="edit_third_table">
+							<tr>
+								<td width="185" height="1000" align="left" valign="top" background="//theme.webme.com/designs/iceblue/images/navi_bg.gif" class="edit_navi_headbg">
+									<table width="185" border="0" cellspacing="0" cellpadding="0">
+										<tr>
+											<td class="nav_heading">IA. INTELIGENCIA ARTIFICIAL</td>
+										</tr>
+<tr>
+                                            <td class="nav" id="nav_INICIO">
+                                                <a href="/INICIO.htm" class="menu">INICIO</a>
+                                            </td>
+                                        </tr>
+<tr>
+                                            <td class="nav" id="nav_AgentesyAmbientes">
+                                                <a href="/Agentes-y-Ambientes.htm" class="menu">Agentes y Ambientes</a>
+                                            </td>
+                                        </tr>
+<tr>
+                                            <td class="nav" id="nav_Agente">
+                                                <a href="/Agente.htm" class="menu">Agente</a>
+                                            </td>
+                                        </tr>
+<tr>
+                                            <td class="nav" id="nav_ESTRUCRURADEAGENTES">
+                                                <a href="/ESTRUCRURA-DE-AGENTES.htm" class="menu">ESTRUCRURA DE AGENTES</a>
+                                            </td>
+                                        </tr>
+<tr>
+                                            <td class="nav" id="nav_ArquitecturadelosAgentos">
+                                                <a href="/Arquitectura-de-los-Agentos.htm" class="menu">Arquitectura de los Agentos</a>
+                                            </td>
+                                        </tr>
+<tr>
+                                            <td class="nav" id="nav_ClasificaciondeAgentes">
+                                                <a href="/Clasificacion-de-Agentes.htm" class="menu">Clasificacion de Agentes</a>
+                                            </td>
+                                        </tr>
+<tr>
+                                            <td class="nav" id="nav_PROGRAMASDEAGENTES">
+                                                <a href="/PROGRAMAS-DE-AGENTES.htm" class="menu">PROGRAMAS DE AGENTES</a>
+                                            </td>
+                                        </tr>
+<tr class="checked_menu">
+                                            <td class="nav" id="nav_Ambienteentorno">
+                                                <a href="/Ambiente-k1-entorno-k2-.htm" class="menu">Ambiente(entorno)</a>
+                                            </td>
+                                        </tr>
+<tr>
+                                            <td class="nav" id="nav_NUESTRAOPININ">
+                                                <a href="/NUESTRA-OPINI%D2N.htm" class="menu">NUESTRA OPINI&#210;N</a>
+                                            </td>
+                                        </tr>
+<tr>
+                                            <td class="nav" id="nav_Videos">
+                                                <a href="/Videos.htm" class="menu">Videos</a>
+                                            </td>
+                                        </tr>
+										<tr>
+											<td class="edit_below_nav">
+												<img src="//theme.webme.com/designs/iceblue/images/navi_ende.gif" width="185" height="198" alt="" />
+											</td>
+										</tr>
+									</table>
+								</td>
+								<td width="568" height="1000" align="left" valign="top" background="//theme.webme.com/designs/iceblue/images/cont_bg.gif" class="edit_rechts_cbg">
+									<table width="100%" border="0" cellspacing="0" cellpadding="0">
+										<tr>
+											<td>
+												<table class="edit_rechts_tabelle" width="568" border="0" cellspacing="0" cellpadding="0">
+													<tr>
+														<td background="//theme.webme.com/designs/iceblue/images/cont_top.gif" height="38" class="edit_content_top">
+															<table width="568" border="0" cellspacing="0" cellpadding="0">
+																<tr>
+																	<td class="edit_content_left" width="20"></td>
+																	<td class="edit_content_right" width="548" height="5"></td>
+																</tr>
+																<tr>
+																	<td class="edit_content_pre_headline2">&nbsp;</td>
+																	<td class="headline2">Ambiente(entorno)</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+													<tr>
+														<td height="100" align="left" valign="top" background="//theme.webme.com/designs/iceblue/images/cont2_bg.gif" class="edit_content">
+															<table width="100%"	border="0" cellspacing="0" cellpadding="0">
+																<tr>
+																	<td class="edit_content_container">
+																		<table width="100%"	border="0" cellspacing="0" cellpadding="0">
+																			<tr>
+																				<td class="edit_content_left_spacer" width="3%">&nbsp;</td>
+																				<td class="edit_content_main" width="94%">
+																					<div style="width: 510; overflow: auto;"><h4 style="text-align: center"><u><span style="color: #0000ff"><b><span style="font-size: 14pt; font-family: 'Arial','sans-serif'">ENTORNO<br />
+</span></b></span></u><span style="color: #0000ff"><b><span style="font-size: 14pt; font-family: 'Arial','sans-serif'"><br />
+<img alt="" src="http://www.monografias.com/trabajos74/agentes-inteligentes-paso-inteligencia-artificial/image002.gif" /><br />
+<br />
+<br />
+<br />
+<u>Propiedades del entor<span style="font-size: 14pt; font-family: 'Arial','sans-serif'; mso-ansi-language: ES-TRAD; mso-fareast-language: ES-TRAD; mso-fareast-font-family: 'Times New Roman'; mso-bidi-language: AR-SA">no<br />
+</span></u></span></b></span><br />
+<br />
+&nbsp;</h4>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; mso-layout-grid-align: none"><span style="font-size: 14pt"><font face="Times New Roman">A<strong><em>ccesible</em>frente a <i>inaccesible</i>:<br />
+</strong><br />
+</font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; mso-layout-grid-align: none"><span style="font-size: 14pt"><font face="Times New Roman">&iquest;El agente puede determinar inequ&iacute;vocamente el estado de su entorno ?<o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; mso-layout-grid-align: none"><span style="font-size: 14pt"><font face="Times New Roman">Accesible: Ajedrez , &ldquo;tres en raya&rdquo;<o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; mso-layout-grid-align: none"><span style="font-size: 14pt"><font face="Times New Roman">Inaccesible: P&oacute;ker, laberinto, juego de v&iacute;deo<br />
+<br />
+</font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; mso-layout-grid-align: none"><span style="font-size: 14pt"><font face="Times New Roman"><strong><em>Determinista</em>frente a <i>no determinista</i>:<br />
+</strong><br />
+</font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; mso-layout-grid-align: none"><span style="font-size: 14pt"><font face="Times New Roman">&iquest;Los acciones del agente en un estado actual determinan completamente el estado resultante?</font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; mso-layout-grid-align: none"><span style="font-size: 14pt"><font face="Times New Roman"><br />
+Determinista: Ajedrez, agente software en entorno simulado<o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; mso-layout-grid-align: none"><font face="Times New Roman"><span style="font-size: 14pt">No determinsta: gesti&oacute;n de tr&aacute;fico, rob&oacute;t en sala real</span><span style="font-size: 14pt; font-family: 'Arial','sans-serif'"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; mso-layout-grid-align: none"><b><span style="font-size: 14pt; font-family: 'Arial','sans-serif'"><br />
+</span></b></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; mso-layout-grid-align: none"><span style="font-size: 14pt"><font face="Times New Roman">E<strong><em>st&aacute;tico</em>frente a <i>din&aacute;mico</i>:<o:p></o:p></strong></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; mso-layout-grid-align: none"><span style="font-size: 14pt"><font face="Times New Roman"><br />
+&iquest;El estado del entorno pueda cambiar mientras que el agente delibera?<br />
+<br />
+&iquest;Puede cambiar sin que el agente act&uacute;e?<o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; mso-layout-grid-align: none"><span style="font-size: 14pt"><font face="Times New Roman">est&aacute;tico: agente software en un laberinto simulado (entorno no cambia)<o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; mso-layout-grid-align: none"><span style="font-size: 14pt"><font face="Times New Roman"><br />
+&ldquo;semidin&aacute;mico&rdquo;: ajedrez (cambios previsibles)<o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; mso-layout-grid-align: none"><span style="font-size: 14pt"><font face="Times New Roman"><br />
+din&aacute;mico: gesti&oacute;n de tr&aacute;fico (cambios imprevisibles)<o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; mso-layout-grid-align: none"><span style="font-size: 14pt"><font face="Times New Roman"><br />
+D<strong><em>iscreto</em>frente a <i>continuo</i>:<o:p></o:p></strong></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; mso-layout-grid-align: none"><span style="font-size: 14pt"><font face="Times New Roman"><br />
+&iquest;Los conjuntos de posibles percepciones y/o acciones son discretos?<o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; mso-layout-grid-align: none"><span style="font-size: 14pt"><font face="Times New Roman">discreto: ajedrez, agente software en un laberinto simulado<o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; mso-layout-grid-align: none"><span style="font-size: 14pt"><font face="Times New Roman">continuo: robot navegando en una sala real.<br />
+<br />
+</font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 12pt; text-align: center; mso-outline-level: 4"><span style="color: #0000ff"><strong><font size="3"><u><span lang="ES" style="font-family: Arial; mso-ansi-language: ES; mso-fareast-language: ES; mso-bidi-font-weight: bold">Tipos de Ambientes<br />
+</span></u></font></strong></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 12pt; text-align: justify; mso-outline-level: 4"><font size="3"><span lang="ES" style="color: black; font-family: Arial; mso-ansi-language: ES; mso-fareast-language: ES; mso-bidi-font-weight: bold">Como se puede apreciar, los agentes inteligentes est&aacute;n altamente determinados por el ambiente que los rodea, por lo que podemos se&ntilde;alar los tipos de ambientes ante los que tiene que hacer frente:</span><span style="color: black; font-family: Arial; mso-fareast-language: ES; mso-bidi-font-weight: bold"><o:p></o:p></span></font></p>
+<h3 style="text-align: center"><font size="3"><span lang="ES" style="color: black; font-family: Arial; mso-ansi-language: ES; mso-fareast-language: ES; mso-bidi-font-weight: bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><u><strong><span style="color: #0000ff"><span lang="ES" style="font-family: Arial; mso-ansi-language: ES; mso-fareast-language: ES; mso-bidi-font-weight: bold">Accesibles y no accesibles </span></span></strong></u><span style="color: black; font-family: Arial; mso-fareast-language: ES; mso-bidi-font-weight: bold"><o:p></o:p></span></font></h3>
+<p class="MsoNormal" style="margin: 0cm 0cm 12pt; text-align: justify; mso-outline-level: 4"><font size="3"><span lang="ES" style="color: black; font-family: Arial; mso-ansi-language: ES; mso-fareast-language: ES; mso-bidi-font-weight: bold">Si los sensores de un agente le permiten tener accesos al estado total del ambiente se dice que este es accesible a tal agente. Un agente es realmente accesible si los sensores detectan todos los aspectos relevantes a la elecci&oacute;n de una acci&oacute;n.</span><span style="color: black; font-family: Arial; mso-fareast-language: ES; mso-bidi-font-weight: bold"><o:p></o:p></span></font></p>
+<h3 style="text-align: center"><font size="3"><span lang="ES" style="color: black; font-family: Arial; mso-ansi-language: ES; mso-fareast-language: ES; mso-bidi-font-weight: bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000ff"><strong><u>Deterministas y no deterministas</u></strong></span> </span><span style="color: black; font-family: Arial; mso-fareast-language: ES; mso-bidi-font-weight: bold"><o:p></o:p></span></font></h3>
+<p class="MsoNormal" style="margin: 0cm 0cm 12pt; text-align: justify; mso-outline-level: 4"><font size="3"><span lang="ES" style="color: black; font-family: Arial; mso-ansi-language: ES; mso-fareast-language: ES; mso-bidi-font-weight: bold">Si el estado siguiente de un ambiente se determina completamente mediante el estado actual, as&iacute; mismo como las acciones escogidas por el agente, nos encontramos ante un ambiente determinista.</span><span style="color: black; font-family: Arial; mso-fareast-language: ES; mso-bidi-font-weight: bold"><o:p></o:p></span></font><br />
+<br />
+<font size="3"><span lang="ES" style="color: black; font-family: Arial; mso-ansi-language: ES; mso-fareast-language: ES; mso-bidi-font-weight: bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><strong><u><span style="color: #0000ff"><span lang="ES" style="font-family: Arial; mso-ansi-language: ES; mso-fareast-language: ES; mso-bidi-font-weight: bold">Epis&oacute;dicos y no epis&oacute;dicos </span></span></u></strong><span style="color: black; font-family: Arial; mso-fareast-language: ES; mso-bidi-font-weight: bold"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 12pt; text-align: justify; mso-outline-level: 4"><font size="3"><span lang="ES" style="color: black; font-family: Arial; mso-ansi-language: ES; mso-fareast-language: ES; mso-bidi-font-weight: bold">En este ambiente la experiencia del agente se divide en &quot;episodios&quot;. Cada episodio consta de un agente que percibe y act&uacute;a. La calidad de su actuaci&oacute;n depender&aacute; del episodio mismo dado que los episodios subsecuentes no depender&aacute;n de las acciones producidas en episodios anteriores.</span><span style="color: black; font-family: Arial; mso-fareast-language: ES; mso-bidi-font-weight: bold"><o:p></o:p></span></font></p>
+<h3 style="text-align: center"><font size="3"><span lang="ES" style="color: black; font-family: Arial; mso-ansi-language: ES; mso-fareast-language: ES; mso-bidi-font-weight: bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color: #0000ff"><strong><u><span lang="ES" style="font-family: Arial; mso-ansi-language: ES; mso-fareast-language: ES; mso-bidi-font-weight: bold">Est&aacute;ticos y din&aacute;micos </span></u></strong></span><span style="color: black; font-family: Arial; mso-fareast-language: ES; mso-bidi-font-weight: bold"><o:p></o:p></span></font></h3>
+<p class="MsoNormal" style="margin: 0cm 0cm 12pt; text-align: justify; mso-outline-level: 4"><font size="3"><span lang="ES" style="color: black; font-family: Arial; mso-ansi-language: ES; mso-fareast-language: ES; mso-bidi-font-weight: bold">Si existe la posibilidad de que el ambiente sufra modificaciones mientras que el agente se encuentra deliberando, se dice que tal ambiente se comporta en forma din&aacute;mica en relaci&oacute;n con el agente.</span><span style="color: black; font-family: Arial; mso-fareast-language: ES; mso-bidi-font-weight: bold"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 12pt; text-align: center; mso-outline-level: 4"><font size="3"><span lang="ES" style="color: black; font-family: Arial; mso-ansi-language: ES; mso-fareast-language: ES; mso-bidi-font-weight: bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000ff"><strong><u><span lang="ES" style="font-family: Arial; mso-ansi-language: ES; mso-fareast-language: ES; mso-bidi-font-weight: bold">&nbsp;Discretos y continuos </span></u></strong></span><span style="color: black; font-family: Arial; mso-fareast-language: ES; mso-bidi-font-weight: bold"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 12pt; text-align: justify; mso-outline-level: 4"><font size="3"><span lang="ES" style="color: black; font-family: Arial; mso-ansi-language: ES; mso-fareast-language: ES; mso-bidi-font-weight: bold">Si existe una cantidad limitada de percepciones y acciones distintas y claramente discernibles, se dice que el ambiente es discreto caso contrario es continuo.</span><span style="color: black; font-family: Arial; mso-fareast-language: ES; mso-bidi-font-weight: bold"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 12pt; text-align: justify; mso-outline-level: 4"><span style="color: black; font-family: Arial; mso-fareast-language: ES; mso-bidi-font-weight: bold"><font size="3">&nbsp;<o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-align: justify; mso-layout-grid-align: none">&nbsp;</p>
+<p class="MsoNormal" align="center" style="margin: 0cm 0cm 10pt; text-align: center"><span style="color: #0000ff"><u><b style="mso-bidi-font-weight: normal"><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial">PROPIEDADES DE LOS ENTORNOS(ambientes) DE TRABAJO</span></b></u></span><b style="mso-bidi-font-weight: normal"><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial"><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; text-align: justify"><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial">El rango de los entornos de trabajo en lo que utilizan t&eacute;cnicas de IA es obviamente muy grande. Sin embargo, se puede identificar un peque&ntilde;o n&uacute;mero de dimensiones en las que categorizan estos entornos. Estas dimensiones determinan, hasta cierto punto, el dise&ntilde;o mas adecuado para el agente .<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"><span style="color: #0000ff"><u><b style="mso-bidi-font-weight: normal"><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial">TOTALMENTE OBSERVABLE VS PARCIALMENTE OBSERVABLE</span></b></u></span><b style="mso-bidi-font-weight: normal"><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial"><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; text-align: justify"><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial">Si los sensores del agente le proporcionan acceso al estado completo del medio en cada momento, entonces se dice que el entorno del trabajo es totalmente observable. Un entorno de trabajo es, efectivamente, totalmente observable si los sensores detectan todos los aspectos que son relevantes en la toma de decisiones; la relevancia en cada momento depende de las medidas de rendimiento. Entornos totalmente observables son convenientes ya que el agente no necesita mantener ning&uacute;n estado interno para saber que sucede en el mundo. Un entorno puede ser parcialmente observable debido al ruido y a la existencia de sensores poco exactos o porque los sensores no reciben informaci&oacute;n de parte del sistema.<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; text-align: justify"><span style="color: #0000ff"><strong><u><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial">Ejemplos:</span></u></strong></span><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; text-align: justify"><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial">Un agente aspiradora con solo un sensor de suciedad local no puede saber si hay suciedad en otro cuarto, y un taxi automatizado no puede saber que est&aacute;n pensando los conductores.<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"><span style="color: #0000ff"><u><b style="mso-bidi-font-weight: normal"><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial">DETERMINANTE VS ESTOCASTICO (al azar)</span></b></u></span><b style="mso-bidi-font-weight: normal"><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial"><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; text-align: justify"><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial">Si el siguiente estado del medio esta totalmente determinado por el estado actual y la acci&oacute;n ejecutada por el agente, entonces se dice que el entorno es determinista; de otra forma es estoc&aacute;stico;<span style="mso-spacerun: yes">&nbsp; </span>en principio, un agente no se tiene que preocupar de la incertidumbre de un medio totalmente observable y determinista. Sin embargo si el medio es parcialmente observable puede parecer estoc&aacute;stico. Esto es particularmente cierto si se trata de un medio complejo, haciendo dif&iacute;cil el mantener constancia de todos los aspectos observados. As&iacute;, a menudo es mejor pensar en entornos determinantes o estoc&aacute;sticos desde el punto de vista del agente.<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; text-align: justify"><span style="color: #0000ff"><strong><u><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial">Ejemplo:</span></u></strong></span><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; text-align: justify"><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial">El taxi es claramente estoc&aacute;stico en este sentido, ya que no se puede predecir el comportamiento de trafico exactamente; mas aun una rueda se puede reventar y un motor se puede da&ntilde;ar sin previo aviso.<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; text-align: justify"><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial">El mundo de la aspiradora es determinista.<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"><span style="color: #0000ff"><u><b style="mso-bidi-font-weight: normal"><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial">EPISODICO VS SECUENCIAL</span></b></u></span><b style="mso-bidi-font-weight: normal"><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial"><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; text-align: justify"><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial">En un entorno de trabajo epis&oacute;dico, la experiencia del agente se divide en episodios at&oacute;micos. Cada episodio consiste en la percepci&oacute;n del agente y la realizaci&oacute;n de una &uacute;nica acci&oacute;n posterior.<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; text-align: justify"><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial">Es muy importante tener en cuenta que el siguiente episodio no depende de las acciones que se realizaron en episodios previos. En los medios epis&oacute;dicos la acci&oacute;n en cada episodio depende solo del episodio en si mismo. Muchas tareas de clasificaci&oacute;n son epis&oacute;dicas.<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; text-align: justify"><span style="color: #0000ff"><strong><u><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial">Ejemplos:</span></u></strong></span><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; text-align: justify"><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial">Un agente que tenga que seleccionar partes defectuosas de una cadena de montaje basa sus decisiones en la parte que esta evaluando en cada momento, sin tener en cuenta decisiones previas; la decisi&oacute;n presente no afecta en que la pr&oacute;xima fase sea defectuosa.<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; text-align: justify"><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial">En entornos secuenciales la elecci&oacute;n presente puede afectar a decisiones futuras.<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial">El ajedrez como el taxi son secuenciales.<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"><span style="color: #0000ff"><u><b style="mso-bidi-font-weight: normal"><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial">ESTATICO VS DINAMICO</span></b></u></span><b style="mso-bidi-font-weight: normal"><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial"><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; text-align: justify"><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial">Si el entorno puede cambiar cuando el agente esta deliberando, entonces se dice que el entorno es din&aacute;mico para el agente; de otra forma se dice que es est&aacute;tico.<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; text-align: justify"><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial">Los medios est&aacute;ticos son f&aacute;ciles de tratar ya que el agente no necesita estar pendiente del mundo mientras est&aacute; tomando una decisi&oacute;n sobre una acci&oacute;n, ni necesita preocuparse sobre el paso del tiempo.<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; text-align: justify"><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial">Los medios din&aacute;micos por el contrario est&aacute;n preguntando continuamente al agente que quiere hacer, si no se ah decidido aun, entonces se entiende que ah tomado la decisi&oacute;n de no hacer nada. <o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; text-align: justify"><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial">Ejemplos:<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; text-align: justify"><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial">El taxista es claramente din&aacute;mico: tanto los otros coches como el taxi se est&aacute;n moviendo mientras el algoritmo que gu&iacute;a la conducci&oacute;n indica que es lo pr&oacute;ximo a hacer. <o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; text-align: justify"><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial">El ajedrez cuando se juega con un reloj, es semideterminista. Los crucigramas son est&aacute;ticos.<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"><span lang="ES-HN" style="font-size: 12pt; line-height: 115%; font-family: Arial"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-align: justify; mso-layout-grid-align: none">&nbsp;</p><div class="OUTBRAIN" data-ob-contenturl="https://iartificial.es.tl/Ambiente-k1-entorno-k2-.htm" data-widget-id="AR_1" data-ob-installation-key="DEDER1336F53KG67MGDL4PLCO">&nbsp;</div></div>
+																				</td>
+																				<td class="edit_content_right_spacer" width="3%">&nbsp;</td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+													<tr>
+														<td height="31" background="//theme.webme.com/designs/iceblue/images/cont_bottom.gif" class="edit_content_bottom"></td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td background="//theme.webme.com/designs/iceblue/images/footer.gif" height="31" class="edit_content_bottom2">
+												<table width="100%"	border="0" cellspacing="0" cellpadding="0">
+													<tr>
+														<td class="edit_content_bottom2_left_spacer" width="2%">&nbsp;</td>
+														<td class="edit_content_bottom2_counter" width="96%" style="color:white; text-align: center;">
+															Hoy habia 1 visitantes (1 clics a subp&#225;ginas) &#161;Aqui en esta p&#225;gina!														</td>
+														<td class="edit_content_botom2_right_spacer" width="2%">&nbsp;</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</td>                              
+								<td width="168" align="left" valign="top" background="//theme.webme.com/designs/iceblue/images/rechts_bg2.gif" class="edit_rechts_bottom">
+
+                                 
+									<table id="sidebar_heading_1" width="168" border="0" cellspacing="0" cellpadding="0">
+										<tr>
+											<td class="sidebar_heading">INTEGRANTES</td>
+										</tr>
+										<tr>
+											<td class="shouty">
+DANIEL BAJA&#209;A<br />
+PAOLA ZURITA<br />
+LEANDRO LOPEZ											</td>
+										</tr>
+										<tr>
+											<td background="//theme.webme.com/designs/iceblue/images/poll_bottom_bg.gif" height="27" class="edit_rb_footer" id="edit_rb_footer_1">&nbsp;</td>
+										</tr>
+									</table>
+
+                                     
+                                    
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td width="79" background="//theme.webme.com/designs/iceblue/images/s_bg.gif" class="edit_rechts_sbg">&nbsp;</td>
+	</tr>
+</table>
+<FONT color="white"></FONT>
+<a id="selfpromotionOverlay" href="https://www.paginawebgratis.es/?c=4000&amp;utm_source=selfpromotion&amp;utm_campaign=overlay&amp;utm_medium=footer" target="_blank" rel="nofollow">
+    Este sitio web fue creado de forma gratuita con <b>PaginaWebGratis.es</b>. ¿Quieres también tu sitio web propio?
+
+    <div class="btn btn-1">Registrarse gratis</div>
+
+</a>
+<style>
+    body {
+        padding-top: 124px;
+    }
+    #forFixedElement {
+        top: 124px;
+    }
+    @media (min-width: 365px) {
+        body {
+            padding-top: 103px;
+        }
+        #forFixedElement {
+            top: 103px;
+        }
+    }
+    @media (min-width: 513px) {
+        body {
+            padding-top: 82px;
+        }
+        #forFixedElement {
+            top: 82px;
+        }
+    }
+    @media (min-width: 936px) {
+        body {
+            padding-top: 61px;
+        }
+        #forFixedElement {
+            top: 61px;
+        }
+    }
+
+    /* General button style */
+    #selfpromotionOverlay .btn {
+        border: none;
+        font-size: inherit;
+        color: inherit;
+        background: none;
+        cursor: pointer;
+        padding: 6px 15px;
+        display: inline-block;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 700;
+        outline: none;
+        position: relative;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+        margin: 0px;
+    }
+
+    /* Button 1 */
+    #selfpromotionOverlay .btn-1, #selfpromotionOverlay .btn-1:visited {
+        background: rgb(0, 85, 204);
+        color: #fff;
+    }
+
+    #selfpromotionOverlay .btn-1:hover {
+        background: #2980b9;
+    }
+
+    #selfpromotionOverlay .btn-1:active {
+        background: #2980b9;
+        top: 2px;
+    }
+
+    #selfpromotionOverlay {
+        font: 400 12px/1.8 "Open Sans", Verdana, sans-serif;
+        text-align: center;
+        opacity: 1;
+        transition: opacity 1s ease;
+        position: fixed;
+        overflow: hidden;
+        box-sizing: border-box;
+        font-size: 14px;
+        text-decoration: none;
+        line-height: 1.5em;
+        flex-wrap: nowrap;
+        z-index: 5000;
+        padding: 14px;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        color: rgb(35,35,35);
+        background-color: rgb(246,246,246);
+        border-bottom: 1px solid #5a5a5a;
+    }
+
+    #selfpromotionOverlay:hover {
+        background: white;
+        text-decoration: none;
+    }
+</style></body>
+</html>
