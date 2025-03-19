@@ -20,3 +20,4 @@ Es la capacidad de un modelo para predecir o categorizar de manera correcta dato
 Método no paramétrico que requiere guardar todos los datos del conjunto de entrenamiento. Calcula una medida de similitud del dato desconocido con todos los datos del conjunto de entrenamiento y selecciona la clase del dato más cercano. Siendo k el número de vecinos, se puede usar 1-NN o k-NN con k>1.
 * La Maldición de la Dimensionalidad
 La maldición de la dimensionalidad se refiere a los problemas que surgen cuando se trabaja con datos de alta dimensionalidad.
+=======
