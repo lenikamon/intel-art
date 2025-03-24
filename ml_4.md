@@ -1,6 +1,6 @@
 # Semana 2
 ### Lenika Elizabeth Montoya Valencia
-<img src="images/ml.jpeg" alt="Notas escritas en clase" />
+<img src="images/ml.jpg" alt="Notas escritas en clase" />
 
 Machine Learning:
 Campo de estudio que le da a las computadoras la habilidad de aprender sin ser explicitamente programadas.
