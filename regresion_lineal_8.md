@@ -1,6 +1,7 @@
 # Lineal Regression 
 ### Lenika Elizabeth Montoya Valencia
 
+<img src="images/regresion.jpeg" alt="Notas escritas en clase" />
 training data -> learning algorithm -> predictor(input and output)
 Tenemos que conocer:
 * H conjunto de funciones
