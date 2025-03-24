@@ -1,6 +1,8 @@
 # Semana 1
 ### Lenika Elizabeth Montoya Valencia
 
+<img src="images/agente.jpg" alt="Notas escritas en clase" />
+
 Inteligencia Artificial es el desarrollo de agentes racionales que interactuan con un entorno.
 
 [Imagen agente-entorno]
