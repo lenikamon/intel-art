@@ -8,7 +8,7 @@ Las notas fueron tomadas a mano durante las clases presenciales, los temas tambi
 
 | Archivo                                    | Descripción                                               |
 |-------------------------------------------|-----------------------------------------------------------|
-| [Agentes Inteligentes](intel-art/Agente_3.md)                | Explicación de los agentes inteligentes                   |
+| [Agentes Inteligentes](Agente_3.md)                | Explicación de los agentes inteligentes                   |
 | [Machine Learning](intel-art/ml_4.md)                       | Descripción de Machine Learning                            |
 | [Aprendizaje](intel-art/aprendizaje_5.md)                   | Introducción al aprendizaje supervisado                   |
 | [Árboles de decisión](intel-art/arboles_desicion_6.md)      | Introducción a los árboles de decisión                     |
