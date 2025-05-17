@@ -15,7 +15,7 @@ Las notas fueron tomadas a mano durante las clases presenciales, los temas tambi
 | [Sesgo Cognitivo](sesgoml_7.md)                   | Explicación del sesgo cognitivo en aprendizaje automático  |
 | [Regresión Lineal](regresion_lineal_8.md)          | Notas de regresión lineal                                  |
 | [Clasificación Lineal](clas_lineal_9.md)           | Notas de clasificación lineal                             |
-| [Descenso de Gradiente](descenso_grad_10.md)       | Notas de descenso de gradiente estocástico                |
+| [Descenso de Gradiente](decenso_grad_10.md)       | Notas de descenso de gradiente estocástico                |
 | [Características](caracteristicas_11.md)           | Notas sobre generación de características y plantillas    |
 | [Búsqueda en Espacios Discretos](Busqueda_12.md)   | Introducción a búsquedas                                   |
 | [Juegos Adversarios](juegos_ad_13.md)              | Introducción a juegos con adversarios                      |
